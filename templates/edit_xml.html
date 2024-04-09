@@ -1,24 +1,29 @@
+<!-- edit_xml.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Editar XML</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <!-- Corrigindo o link para o arquivo CSS -->
 </head>
 <body>
     <h1>Editar XML</h1>
-    <form action="/salvar-xml" method="post">
+    <form action="/edit-xml-page" method="post"> <!-- Alterado o action para o endpoint correto -->
         <label for="nNF">Número da Nota Fiscal:</label>
         <input type="text" id="nNF" name="nNF" value="{{ nNF }}"><br>
 
         <h2>Emitente</h2>
         <label for="emit_CNPJ">CNPJ do Emitente:</label>
         <input type="text" id="emit_CNPJ" name="emit_CNPJ" value="{{ emit_CNPJ }}"><br>
+        <label for="emit_xNome">Nome do Emitente:</label>
+        <input type="text" id="emit_xNome" name="emit_xNome" value="{{ emit_xNome }}"><br>
 
         <h2>Destinatário</h2>
         <label for="dest_CNPJ">CNPJ do Destinatário:</label>
         <input type="text" id="dest_CNPJ" name="dest_CNPJ" value="{{ dest_CNPJ }}"><br>
+        <label for="dest_xNome">Nome do Destinatário:</label>
+        <input type="text" id="dest_xNome" name="dest_xNome" value="{{ dest_xNome }}"><br>
 
         {% for produto in produtos %}
             <h2>Produto</h2>
@@ -49,9 +54,14 @@
         <input type="text" id="vNF" name="vNF" value="{{ vNF }}"><br>
 
         <br>
-        <button type="submit">Salvar XML</button>
+        <button type="submit">Salvar Alterações XML</button>
+        {% if xml_saved %}
+        <br>
+        <a href="{{ url_for('download_xml') }}" class="download-button">Baixar XML</a>
+        {% endif %}
     </form>
 </body>
 </html>
+
 
 

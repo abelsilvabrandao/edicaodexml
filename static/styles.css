@@ -67,35 +67,7 @@ button[type="submit"]:hover {
     background-color: #45a049; /* cor verde escura */
 }
 
-
-/* Página de Result*/
-
-/* styles.css */
-
-.logo {
-    width: 200px; /* largura da logo */
-    display: block;
-    margin: 0 auto; /* centraliza horizontalmente */
-}
-
-.qr-code {
-    width: 200px; /* ajuste o tamanho conforme necessário */
-    height: auto; /* manter a proporção */
-    display: block;
-    margin: 0 auto; /* centraliza horizontalmente */
-}
-
-.attention {
-    color: red;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.return-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+.download-button {
     background-color: #4CAF50; /* cor verde */
     color: white;
     padding: 10px 20px;
@@ -105,70 +77,36 @@ button[type="submit"]:hover {
     text-decoration: none;
 }
 
-.return-button:hover {
+.download-button:hover {
     background-color: #45a049; /* cor verde escura */
 }
 
-/* styles.css */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* Estilos para a página de edição de XML */
+.edit-container {
+    text-align: center;
 }
 
-.container {
-    max-width: 1200px; /* Define a largura máxima do conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
-    padding: 20px;
+.edit-container h1 {
+    font-size: 24px;
+    margin-bottom: 50px;
 }
 
-.section {
-    margin-bottom: 20px;
+.edit-container h2 {
+    font-size: 15px;
+    margin-bottom: 50px;
 }
 
-.header {
-    background-color: #4CAF50; /* Cor de fundo para a seção do cabeçalho */
-    color: white;
-    padding: 10px 20px;
-}
-
-.content {
-    background-color: #f2f2f2; /* Cor de fundo para a seção de conteúdo */
-    padding: 20px;
-}
-
-.label {
-    font-weight: bold;
-}
-
-.label, .value {
-    margin-bottom: 10px;
-}
-
-.value {
-    font-style: italic;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input[type="text"] {
+.edit-container input[type="text"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
-.button {
-    background-color: #4CAF50;
+.edit-container button[type="submit"] {
+    background-color: #4CAF50; /* cor verde */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -176,12 +114,21 @@ body {
     cursor: pointer;
 }
 
-.button:hover {
-    background-color: #45a049;
+.edit-container button[type="submit"]:hover {
+    background-color: #45a049; /* cor verde escura */
 }
 
-/* Estilos específicos para o formulário de edição */
-.edit-form {
-    max-width: 600px; /* Define a largura máxima do formulário */
-    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+.edit-container .download-button {
+    background-color: #4CAF50; /* cor verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.edit-container .download-button:hover {
+    background-color: #45a049; /* cor verde escura */
 }
